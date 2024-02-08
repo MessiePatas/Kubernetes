@@ -22,6 +22,8 @@ repositories {
 }
 
 dependencies {
+	implementation("org.springframework.data:spring-data-jpa:3.2.2")
+	implementation("javax.persistence:javax.persistence-api:2.2")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
