@@ -1,4 +1,4 @@
-package com.unisabana.juaneivan;
+package com.unisabana.juaneivan.controller;
 import java.util.List;
 import com.unisabana.juaneivan.Entity.Estudiante;
 import com.unisabana.juaneivan.logica.EstudianteLogica;
