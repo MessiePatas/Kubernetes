@@ -1,16 +1,15 @@
 package com.unisabana.juaneivan.logica;
 
 import com.unisabana.juaneivan.Entity.Estudiante;
-import com.unisabana.juaneivan.repository.Repository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.unisabana.juaneivan.Entity.Repository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class EstudianteLogica {
 
-    @Autowired
     private Repository repository;
 
     public Estudiante addEstudiante(Estudiante estudiante){

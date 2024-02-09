@@ -1,7 +1,7 @@
 plugins {
 	java
-	id("org.springframework.boot") version "3.2.2"
-	id("io.spring.dependency-management") version "1.1.4"
+	id("org.springframework.boot") version "2.7.15"
+	id("io.spring.dependency-management") version "1.0.15.RELEASE"
 }
 
 group = "com.example"
@@ -22,9 +22,9 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.data:spring-data-jpa:3.2.2")
-	implementation("javax.persistence:javax.persistence-api:2.2")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("mysql:mysql-connector-java:8.0.32")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

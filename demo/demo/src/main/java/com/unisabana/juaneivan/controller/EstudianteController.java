@@ -3,6 +3,7 @@ import java.util.List;
 import com.unisabana.juaneivan.Entity.Estudiante;
 import com.unisabana.juaneivan.logica.EstudianteLogica;
 import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -23,5 +24,19 @@ public class EstudianteController {
     public List<Estudiante> getEstudiante(){
         return estudianteLogica.getEstudiante();
 }
+@AllArgsConstructor
+public class EstudianteController {
+
+    private EstudianteLogica estudianteLogica;
+
+    @PostMapping("/agregar")
+    public Estudiante addEstudiante(@RequestBody Estudiante estudiante){
+        return estudianteLogica.addEstudiante(estudiante);
+    }
+
+    @GetMapping("/mostrar")
+    public List<Estudiante> getEstudiante(){
+        return estudianteLogica.getEstudiante();
+    }
 
 }
